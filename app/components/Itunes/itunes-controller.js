@@ -19,11 +19,13 @@ function drawSongs() {
                     <ul id = "song-list">${song.title}</ul>
                     <div>
                       <img class="img-responsive" src= "${song.albumArt}" />
-                    </div>
-                    <audio>
-                        <source src="${song.collection}">
+                      <audio>
+                        <source src="${song.collection}" type="audio/mpeg">
                     
                     </audio>
+
+                    </div>
+                    
                  
                    
                   </div>
