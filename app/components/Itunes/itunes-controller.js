@@ -10,24 +10,24 @@ function drawSongs() {
   //$('col').append("<div class = songsSelected> this song</div> ");
   let songs = itunesService.Songs
   let template = ''
-  songs.forEach(element => {
+  songs.forEach(song => {
+
     template +=
       `
                 <div class="row">
-                    <div class="col">${element.Song}</div>
-                    <div class="col">${element.Song}</div>
-                    <div class="col">${element.Song}</div>
-                </div>
-                <div class="row">
-                    <div class="col">${element.Song}</div>
-                    <div class="col">${element.Song}</div>
-                    <div class="col">${element.Song}</div>
-                </div>
-                <div class="row">
-                    <div class="col">${element.Song}</div>
-                    <div class="col">${element.Song}</div>
-                    <div class="col">${element.Song}</div>
-                </div>
+                    <div class="col-6">
+                    <ul id = "song-list"${song.title}"</ul>
+                    <div>
+                      <img class="img-responsive" src= "${song.albumArt}" />
+                    </div>
+                    
+                 
+                   
+                  </div>
+               
+                    
+                
+                
             `
   })
   document.querySelector('.songs-container').innerHTML = template
@@ -40,7 +40,7 @@ function drawSongs() {
 class ItunesController {
   constructor() {
     drawSongs()
-    itunesService.addSubscriber('songs', drawSongs())
+    itunesService.addSubscriber('songs', drawSongs)
     //BE SURE TO REGISTER YOUR SUBSCRIBERS!!!!!!!
   }
 
