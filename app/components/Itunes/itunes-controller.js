@@ -13,29 +13,52 @@ function drawSongs() {
   songs.forEach(song => {
 
     template +=
+
       `
-                <div class="row">
-                    <div class="col-6">
-                    <ul id = "song-list">${song.title}</ul>
-                    <div>
-                      <img class="img-responsive" src= "${song.albumArt}" />
-                      <audio>
-                        <source src="${song.collection}" type="audio/mpeg">
+      <div class= "container songs-container">
+                <div class="row mx-auto   ">  
+                    <div class="col-6  ">
+                     <ul id = "song-title">${song.title}</ul>
+                    <ul id = "song-artist" >${song.artist}</ul>
+                    <ul id = "song-collection">${song.collection}</ul>
                     
+                   
+                      <img class="img-responsive" src= "${song.albumArt}" />
+                      <audio controls>
+                    <source src="${song.preview}" type="audio/mpeg">
+      
                     </audio>
+                    
+                    </div>
+
+                     <div class="col-6 " >
+                    <ul id = "song-title">${song.title}</ul>
+                    <ul id = "song-artist" >${song.artist}</ul>
+                    <ul id = "song-collection">${song.collection}</ul>
+                    
+                   
+                      <img class="img-responsive" src= "${song.albumArt}" />
+                      <audio controls>
+                    <source src="${song.preview}" type="audio/mpeg">
+      
+                    </audio>
+                   
+                    </div>
 
                     </div>
-                    
+                    </div>
+           
+               
                  
                    
-                  </div>
+                  
                
                     
                 
                 
             `
   })
-  document.querySelector('.songs-container').innerHTML = template
+  document.querySelector('main').innerHTML = template
 
 
 }
