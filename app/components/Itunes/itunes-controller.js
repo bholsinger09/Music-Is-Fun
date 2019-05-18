@@ -21,6 +21,7 @@ function drawSongs() {
                      <ul id = "song-title">${song.title}</ul>
                     <ul id = "song-artist" >${song.artist}</ul>
                     <ul id = "song-collection">${song.collection}</ul>
+                    <ul id = "song-price"><p>Price:${'$' + song.price}</p></ul>
                     
                    
                       <img class="img-responsive" src= "${song.albumArt}" />
@@ -35,14 +36,14 @@ function drawSongs() {
                     <ul id = "song-title">${song.title}</ul>
                     <ul id = "song-artist" >${song.artist}</ul>
                     <ul id = "song-collection">${song.collection}</ul>
-                    
+                    <ul id = "song-price"><p>Price:${'$' + song.price}</p></ul>
                    
                       <img class="img-responsive" src= "${song.albumArt}" />
                       <audio controls>
                     <source src="${song.preview}" type="audio/mpeg">
       
                     </audio>
-                   
+                    
                     </div>
 
                     </div>
