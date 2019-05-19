@@ -11,37 +11,42 @@
 </head>
 
 <body>
-    <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
-        <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-        <div class="form-group">
-            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
-            <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
-        </div>
-    </form>
     <main>
-
-        <!--this area is going to be a containter template for songs  -->
-        <!-- <div class="container songs-container" id="songs-list2">
-            <div class="row" <div class="col>
-                            <ul id = " song-title">${song.title}</ul>
-                <ul id="song-artist">${song.artist}</ul>
-                <ul id="song-collection">${song.collection}</ul>
-        
-                <img class="img-responsive" src="${song.albumArt}" />
-                <audio controls>
-                    <source src="${song.preview}" type="audio/mpeg">
-        
-                </audio>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col"></div>
+                <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
+                    <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                        <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+                    </div>
+                </form>
             </div>
+
+            <div class="songs-dropzone row "></div>
+
+
         </div>
-        </div> -->
 
 
-        <!--this area is going to be a containter template for songs  -->
+        <!-- <div class="container"> -->
+
+        <!--this area is going to be a contain the template for songs  -->
+
+        <!--this area is going to be a contain template for songs  -->
+
+
+        <!-- </div> -->
+
+
+
+
+
+
 
 
     </main>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="module" src="app/main.js"></script>
 </body>

@@ -15,51 +15,29 @@ function drawSongs() {
     template +=
 
       `
-      <div class= "container songs-container">
-                <div class="row mx-auto   ">  
-                    <div class="col-6  ">
-                     <ul id = "song-title">${song.title}</ul>
-                    <ul id = "song-artist" >${song.artist}</ul>
-                    <ul id = "song-collection">${song.collection}</ul>
-                    <ul id = "song-price"><p>Price:${'$' + song.price}</p></ul>
-                    
-                   
-                      <img class="img-responsive" src= "${song.albumArt}" />
-                      <audio controls>
-                    <source src="${song.preview}" type="audio/mpeg">
-      
-                    </audio>
-                    
-                    </div>
+      <div class="card mt-2 mb-2 ml-2" style="width: 20rem;">
+                        <img class="card-img-top" src="${song.albumArt}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">${song.title}</h5>
+                            <p class="card-text">${song.artist}</p>
+                            <p class="card-text">${'$' + song.price}</p>
+                            <p class="card-text">${song.collection}</p>
+                           
 
-                     <div class="col-6 " >
-                    <ul id = "song-title">${song.title}</ul>
-                    <ul id = "song-artist" >${song.artist}</ul>
-                    <ul id = "song-collection">${song.collection}</ul>
-                    <ul id = "song-price"><p>Price:${'$' + song.price}</p></ul>
-                   
-                      <img class="img-responsive" src= "${song.albumArt}" />
-                      <audio controls>
-                    <source src="${song.preview}" type="audio/mpeg">
-      
-                    </audio>
-                    
-                    </div>
 
-                    </div>
-                    </div>
-           
-               
-                 
-                   
-                  
-               
-                    
-                
+                        </div>
+                         <audio controls>
+                                <source src="${song.preview}" type="audio/mpeg">
+
+                            </audio>
+                       
+
+                    </div> 
+                         
                 
             `
   })
-  document.querySelector('main').innerHTML = template
+  document.querySelector('.songs-dropzone').innerHTML = template
 
 
 }
